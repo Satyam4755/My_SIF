@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2026-07-13 14:43:37.959768",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "sif",
+  "latest_nav",
+  "previous_nav",
+  "latest_nav_date",
+  "returns_section",
+  "1_day_return",
+  "1_week_return",
+  "1_month_return",
+  "3_month_return",
+  "6_month_return",
+  "1_year_return",
+  "since_launch_return",
+  "cagr_section",
+  "1_year_cagr",
+  "since_launch_cagr",
+  "risk_section",
+  "annualized_volatility",
+  "maximum_drawdown",
+  "statistics_section",
+  "highest_nav",
+  "lowest_nav",
+  "last_updated"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic"
+  },
+  {
+   "fieldname": "sif",
+   "fieldtype": "Link",
+   "label": "SIF",
+   "options": "SIF"
+  },
+  {
+   "fieldname": "latest_nav",
+   "fieldtype": "Float",
+   "label": "Latest NAV"
+  },
+  {
+   "fieldname": "previous_nav",
+   "fieldtype": "Float",
+   "label": "Previous NAV"
+  },
+  {
+   "fieldname": "latest_nav_date",
+   "fieldtype": "Date",
+   "label": "Latest NAV Date"
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns"
+  },
+  {
+   "fieldname": "1_day_return",
+   "fieldtype": "Percent",
+   "label": "1 Day Return"
+  },
+  {
+   "fieldname": "1_week_return",
+   "fieldtype": "Percent",
+   "label": "1 Week Return"
+  },
+  {
+   "fieldname": "1_month_return",
+   "fieldtype": "Percent",
+   "label": "1 Month Return"
+  },
+  {
+   "fieldname": "3_month_return",
+   "fieldtype": "Percent",
+   "label": "3 Month Return"
+  },
+  {
+   "fieldname": "6_month_return",
+   "fieldtype": "Percent",
+   "label": "6 Month Return"
+  },
+  {
+   "fieldname": "1_year_return",
+   "fieldtype": "Percent",
+   "label": "1 Year Return"
+  },
+  {
+   "fieldname": "since_launch_return",
+   "fieldtype": "Percent",
+   "label": "Since Launch Return"
+  },
+  {
+   "fieldname": "cagr_section",
+   "fieldtype": "Section Break",
+   "label": "CAGR"
+  },
+  {
+   "fieldname": "1_year_cagr",
+   "fieldtype": "Percent",
+   "label": "1 Year CAGR"
+  },
+  {
+   "fieldname": "since_launch_cagr",
+   "fieldtype": "Percent",
+   "label": "Since Launch CAGR"
+  },
+  {
+   "fieldname": "risk_section",
+   "fieldtype": "Section Break",
+   "label": "Risk"
+  },
+  {
+   "fieldname": "annualized_volatility",
+   "fieldtype": "Percent",
+   "label": "Annualized Volatility"
+  },
+  {
+   "fieldname": "maximum_drawdown",
+   "fieldtype": "Percent",
+   "label": "Maximum Drawdown"
+  },
+  {
+   "fieldname": "statistics_section",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "highest_nav",
+   "fieldtype": "Float",
+   "label": "Highest NAV"
+  },
+  {
+   "fieldname": "lowest_nav",
+   "fieldtype": "Float",
+   "label": "Lowest NAV"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-13 14:51:40.034498",
+ "modified_by": "Administrator",
+ "module": "My SIF",
+ "name": "Performance",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
