@@ -1,5 +1,6 @@
 for confirmation
 
+
 ```mermaid
 erDiagram
 
@@ -13,51 +14,44 @@ erDiagram
 
 
     AMC {
-        string amc_code PK
+        string name PK
+        string amc_code
         string amc_name
     }
 
     FUND_MANAGER {
-        string manager_id PK
+        string name PK
         string manager_name
     }
 
     FUND_MANAGER_CHILD {
-        string sebi_code FK
-        string manager_id FK
-
+        string name PK
+        string fund_manager FK
         string manager_type
-        string from_date
+        date from_date
     }
 
     SIF_SCHEME {
-        string sebi_code PK
-
+        string name PK
+        string sebi_code
         string fund_name
         string investment_strategy
         string category
         string potential_risk_class
-
         string face_value
-
         string minimum_application_amount
         string minimum_additional_amount
         string minimum_redemption_amount
-
         string exit_load
-
-        string amc_code FK
-
+        string amc FK
         datetime last_updated
     }
 
     PLAN {
-        string sebi_code FK
-
+        string name PK
         string mode
         string option
-        string name
-
+        string plan_name
         string sif_code
         string amfi_code
         string isin_code
@@ -65,15 +59,15 @@ erDiagram
     }
 
     NAV {
-        string sif_code FK
-
+        string name PK
+        string plan FK
         date nav_date
-        decimal nav
+        float nav
     }
 
     PERFORMANCE {
-        string sif_code PK,FK
-
+        string name PK
+        string plan FK
         float return_1_day
         float return_1_week
         float return_1_month
@@ -86,7 +80,6 @@ erDiagram
         float return_7_year
         float return_10_year
         float since_launch
-
         datetime last_updated
     }
 ```
