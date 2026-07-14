@@ -14,72 +14,83 @@ erDiagram
 
 
     AMC {
-        string name PK
-        string amc_code
-        string amc_name
+        Data name PK
+        Data amc_code
+        Data amc_name
     }
 
     FUND_MANAGER {
-        string name PK
-        string manager_name
+        Data name PK
+        Data manager_name
     }
 
     FUND_MANAGER_CHILD {
-        string name PK
-        string fund_manager FK
-        string manager_type
-        date from_date
+        Data name PK
+        Link fund_manager FK
+        Data manager_type
+        Date from_date
     }
 
     SIF_SCHEME {
-        string name PK
-        string sebi_code
-        string fund_name
-        string investment_strategy
-        string category
-        string potential_risk_class
-        string face_value
-        string minimum_application_amount
-        string minimum_additional_amount
-        string minimum_redemption_amount
-        string exit_load
-        string amc FK
-        datetime last_updated
+        Data name PK
+        Data sebi_code
+        Data fund_name
+        Small Text investment_strategy
+        Data category
+        Data potential_risk_class
+        Data face_value
+
+        Small Text minimum_application_amount
+        Small Text minimum_additional_amount
+        Small Text minimum_redemption_amount
+
+        Text exit_load
+
+        Link amc FK
+
+        Datetime last_updated
     }
 
     PLAN {
-        string name PK
-        string mode
-        string option
-        string plan_name
-        string sif_code
-        string amfi_code
-        string isin_code
-        string rta_code
+        Data name PK
+
+        Select mode
+        Select option
+
+        Data plan_name
+        Data sif_code
+        Data amfi_code
+        Data isin_code
+        Data rta_code
     }
 
     NAV {
-        string name PK
-        string plan FK
-        date nav_date
-        float nav
+        Data name PK
+
+        Link plan FK
+
+        Date nav_date
+        Float nav
     }
 
     PERFORMANCE {
-        string name PK
-        string plan FK
-        float return_1_day
-        float return_1_week
-        float return_1_month
-        float return_3_month
-        float return_6_month
-        float return_1_year
-        float return_2_year
-        float return_3_year
-        float return_5_year
-        float return_7_year
-        float return_10_year
-        float since_launch
-        datetime last_updated
+        Data name PK
+
+        Link plan FK
+
+        Float return_1_day
+        Float return_1_week
+        Float return_1_month
+        Float return_3_month
+        Float return_6_month
+        Float return_1_year
+        Float return_2_year
+        Float return_3_year
+        Float return_5_year
+        Float return_7_year
+        Float return_10_year
+        Float since_launch
+
+        Datetime last_updated
     }
 ```
