@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "sebi_code",
+ "creation": "2026-07-14 13:02:27.947559",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "sebi_code",
+  "fund_name",
+  "investment_strategy",
+  "category",
+  "potential_risk_class",
+  "face_value",
+  "investment_limits_section",
+  "minimum_application_amount",
+  "minimum_additional_amount",
+  "minimum_redemption_amount",
+  "exit_details_section",
+  "exit_load",
+  "relations_section",
+  "amc",
+  "child_tables_section",
+  "fund_managers",
+  "plans"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "sebi_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SEBI Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fund Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investment_strategy",
+   "fieldtype": "Small Text",
+   "label": "Investment Strategy"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "potential_risk_class",
+   "fieldtype": "Data",
+   "label": "Potential Risk Class"
+  },
+  {
+   "fieldname": "face_value",
+   "fieldtype": "Data",
+   "label": "Face Value"
+  },
+  {
+   "fieldname": "investment_limits_section",
+   "fieldtype": "Section Break",
+   "label": "Investment Limits"
+  },
+  {
+   "fieldname": "minimum_application_amount",
+   "fieldtype": "Small Text",
+   "label": "Minimum Application Amount"
+  },
+  {
+   "fieldname": "minimum_additional_amount",
+   "fieldtype": "Small Text",
+   "label": "Minimum Additional Amount"
+  },
+  {
+   "fieldname": "minimum_redemption_amount",
+   "fieldtype": "Small Text",
+   "label": "Minimum Redemption Amount"
+  },
+  {
+   "fieldname": "exit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Exit Details"
+  },
+  {
+   "fieldname": "exit_load",
+   "fieldtype": "Text",
+   "label": "Exit Load"
+  },
+  {
+   "fieldname": "relations_section",
+   "fieldtype": "Section Break",
+   "label": "Relations"
+  },
+  {
+   "fieldname": "amc",
+   "fieldtype": "Link",
+   "label": "AMC",
+   "options": "SIF_AMC"
+  },
+  {
+   "fieldname": "child_tables_section",
+   "fieldtype": "Section Break",
+   "label": "Child Tables"
+  },
+  {
+   "fieldname": "fund_managers",
+   "fieldtype": "Table",
+   "label": "Fund Managers",
+   "options": "SIF_Fund Manager Child"
+  },
+  {
+   "fieldname": "plans",
+   "fieldtype": "Table",
+   "label": "Plans",
+   "options": "SIF_Plan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-14 13:13:20.742480",
+ "modified_by": "Administrator",
+ "module": "My SIF",
+ "name": "SIF_SCHEME",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

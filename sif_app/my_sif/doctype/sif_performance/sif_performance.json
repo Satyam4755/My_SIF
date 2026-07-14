@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "sif_code",
+ "creation": "2026-07-14 13:16:47.791402",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "performance_details_section",
+  "plan",
+  "sif_code",
+  "returns_section",
+  "return_1_day",
+  "return_1_week",
+  "return_1_month",
+  "return_3_month",
+  "return_6_month",
+  "return_1_year",
+  "return_2_year",
+  "return_3_year",
+  "return_5_year",
+  "return_7_year",
+  "return_10_year",
+  "since_launch"
+ ],
+ "fields": [
+  {
+   "fieldname": "performance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Details"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Link",
+   "label": "Plan",
+   "options": "SIF_Plan"
+  },
+  {
+   "fieldname": "sif_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SIF Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns"
+  },
+  {
+   "fieldname": "return_1_day",
+   "fieldtype": "Float",
+   "label": "1 Day Return"
+  },
+  {
+   "fieldname": "return_10_year",
+   "fieldtype": "Float",
+   "label": "10 Year Return"
+  },
+  {
+   "fieldname": "since_launch",
+   "fieldtype": "Float",
+   "label": "Since launch"
+  },
+  {
+   "fieldname": "return_1_week",
+   "fieldtype": "Float",
+   "label": "1 Week Return"
+  },
+  {
+   "fieldname": "return_1_month",
+   "fieldtype": "Float",
+   "label": "1 Month Return"
+  },
+  {
+   "fieldname": "return_3_month",
+   "fieldtype": "Float",
+   "label": "3 Month Return"
+  },
+  {
+   "fieldname": "return_6_month",
+   "fieldtype": "Float",
+   "label": "6 Month Return"
+  },
+  {
+   "fieldname": "return_1_year",
+   "fieldtype": "Float",
+   "label": "1 Year Return"
+  },
+  {
+   "fieldname": "return_2_year",
+   "fieldtype": "Float",
+   "label": "2 Year Return"
+  },
+  {
+   "fieldname": "return_3_year",
+   "fieldtype": "Float",
+   "label": "3 Year Return"
+  },
+  {
+   "fieldname": "return_5_year",
+   "fieldtype": "Float",
+   "label": "5 Year Return"
+  },
+  {
+   "fieldname": "return_7_year",
+   "fieldtype": "Float",
+   "label": "7 Year Return"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-14 16:43:01.514658",
+ "modified_by": "Administrator",
+ "module": "My SIF",
+ "name": "SIF_PERFORMANCE",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

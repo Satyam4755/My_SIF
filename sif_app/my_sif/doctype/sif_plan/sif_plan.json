@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-07-14 13:08:48.913477",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_details_section",
+  "mode",
+  "option",
+  "plan_name",
+  "sif_code",
+  "amfi_code",
+  "isin_code",
+  "rta_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode",
+   "options": "Regular\nDirect",
+   "reqd": 1
+  },
+  {
+   "fieldname": "option",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Option",
+   "options": "Growth\nIDCW Payout\nIDCW Reinvestment\nIDCW Transfer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sif_code",
+   "fieldtype": "Data",
+   "label": "SIF Code"
+  },
+  {
+   "fieldname": "amfi_code",
+   "fieldtype": "Data",
+   "label": "AMFI Code"
+  },
+  {
+   "fieldname": "isin_code",
+   "fieldtype": "Data",
+   "label": "ISIN Code"
+  },
+  {
+   "fieldname": "rta_code",
+   "fieldtype": "Data",
+   "label": "RTA Code"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-14 13:11:57.856443",
+ "modified_by": "Administrator",
+ "module": "My SIF",
+ "name": "SIF_Plan",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
