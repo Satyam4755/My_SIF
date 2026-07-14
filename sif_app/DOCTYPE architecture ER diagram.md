@@ -1,11 +1,11 @@
 for confirmation
 
-
 ```mermaid
 erDiagram
 
     AMC ||--o{ SIF_SCHEME : manages
-    FUND_MANAGER ||--o{ SIF_SCHEME : manages
+    SIF_SCHEME ||--o{ FUND_MANAGER_CHILD : has
+    FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
     SIF_SCHEME ||--o{ PLAN : contains
     PLAN ||--o{ NAV : has
@@ -13,11 +13,21 @@ erDiagram
 
 
     AMC {
-        string amc_name PK
+        string amc_code PK
+        string amc_name
     }
 
     FUND_MANAGER {
-        string manager_name PK
+        string manager_id PK
+        string manager_name
+    }
+
+    FUND_MANAGER_CHILD {
+        string sebi_code FK
+        string manager_id FK
+
+        string manager_type
+        string from_date
     }
 
     SIF_SCHEME {
@@ -36,6 +46,8 @@ erDiagram
 
         string exit_load
 
+        string amc_code FK
+
         datetime last_updated
     }
 
@@ -47,6 +59,7 @@ erDiagram
         string name
 
         string sif_code
+        string amfi_code
         string isin_code
         string rta_code
     }
