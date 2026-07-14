@@ -1,11 +1,9 @@
-import csv
 import json
 import logging
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from typing import Any, Dict, List, Optional, Union
-from io import StringIO
 
 from sif_app.my_sif.config.github_config import GitHubConfig
 
@@ -21,7 +19,7 @@ if not logger.handlers:
 
 class GitHubService:
     """
-    A reusable GitHub client to fetch raw JSON and CSV data.
+    A reusable GitHub client to fetch directories and JSON data.
     """
     
     def __init__(self):
@@ -45,11 +43,42 @@ class GitHubService:
         session.mount("https://", adapter)
         return session
 
+    def list_directory(self, relative_path: str) -> List[str]:
+        """
+        Returns a list of filenames inside a GitHub directory using the Contents API.
+        """
+        api_url = GitHubConfig.get_api_contents_url(relative_path)
+        try:
+            logger.info(f"Listing directory from: {api_url}")
+            headers = {"Accept": "application/vnd.github.v3+json"}
+            response = self.session.get(api_url, headers=headers, timeout=10)
+            
+            if response.status_code == 404:
+                logger.error(f"Directory not found (404) at: {api_url}")
+                return []
+            
+            if response.status_code == 403:
+                logger.error(f"GitHub API Rate Limit exceeded: {response.text}")
+                return []
+                
+            response.raise_for_status()
+            contents = response.json()
+            
+            if isinstance(contents, list):
+                # Return only file names
+                return [item['name'] for item in contents if item['type'] == 'file']
+            else:
+                logger.error(f"Path is not a directory: {api_url}")
+                return []
+                
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Network failure while listing {api_url}: {str(e)}")
+            return []
+
     def build_raw_url(self, relative_path: str) -> str:
         """
         Constructs the full raw GitHub URL for a given relative path.
         """
-        # Ensure there are no double slashes if relative_path starts with '/'
         clean_path = relative_path.lstrip('/')
         return f"{self.base_url}/{clean_path}"
 
@@ -86,23 +115,4 @@ class GitHubService:
             return json.loads(content)
         except json.JSONDecodeError as e:
             logger.error(f"Invalid JSON received from {url}: {str(e)}")
-            return None
-
-    def get_csv(self, relative_path: str) -> Optional[List[Dict[str, str]]]:
-        """
-        Downloads and parses a CSV file from GitHub into a list of dictionaries.
-        """
-        url = self.build_raw_url(relative_path)
-        content = self._fetch_content(url)
-        
-        if not content:
-            return None
-            
-        try:
-            # Parse CSV content using DictReader
-            f = StringIO(content)
-            reader = csv.DictReader(f)
-            return list(reader)
-        except Exception as e:
-            logger.error(f"Failed to parse CSV from {url}: {str(e)}")
             return None
