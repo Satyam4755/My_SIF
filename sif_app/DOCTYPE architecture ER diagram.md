@@ -13,80 +13,80 @@ erDiagram
 
 
     AMC {
-        string amc_code PK
-        string amc_name
+        Data name PK
+        Data amc_code
+        Data amc_name
     }
 
     FUND_MANAGER {
-        string manager_id PK
-        string manager_name
+        Data name PK
+        Data manager_name
     }
 
     FUND_MANAGER_CHILD {
-        string sebi_code FK
-        string manager_id FK
+        Link fund_manager
 
-        string manager_type
-        string from_date
+        Data manager_type
+        Date from_date
     }
 
     SIF_SCHEME {
-        string sebi_code PK
+        Data name PK
 
-        string fund_name
-        string investment_strategy
-        string category
-        string potential_risk_class
+        Data sebi_code UNIQUE
 
-        string face_value
+        Data fund_name
+        Text investment_strategy
+        Data category
+        Data potential_risk_class
 
-        string minimum_application_amount
-        string minimum_additional_amount
-        string minimum_redemption_amount
+        Data face_value
 
-        string exit_load
+        Data minimum_application_amount
+        Data minimum_additional_amount
+        Data minimum_redemption_amount
 
-        string amc_code FK
+        Text exit_load
 
-        datetime last_updated
+        Link amc
+
+        Datetime last_updated
     }
 
     PLAN {
-        string sebi_code FK
+        Data mode
+        Data option
+        Data plan_name
 
-        string mode
-        string option
-        string name
-
-        string sif_code
-        string amfi_code
-        string isin_code
-        string rta_code
+        Data sif_code
+        Data amfi_code
+        Data isin_code
+        Data rta_code
     }
 
     NAV {
-        string sif_code FK
+        Link plan
 
-        date nav_date
-        decimal nav
+        Date nav_date
+        Float nav
     }
 
     PERFORMANCE {
-        string sif_code PK,FK
+        Link plan
 
-        float return_1_day
-        float return_1_week
-        float return_1_month
-        float return_3_month
-        float return_6_month
-        float return_1_year
-        float return_2_year
-        float return_3_year
-        float return_5_year
-        float return_7_year
-        float return_10_year
-        float since_launch
+        Float return_1_day
+        Float return_1_week
+        Float return_1_month
+        Float return_3_month
+        Float return_6_month
+        Float return_1_year
+        Float return_2_year
+        Float return_3_year
+        Float return_5_year
+        Float return_7_year
+        Float return_10_year
+        Float since_launch
 
-        datetime last_updated
+        Datetime last_updated
     }
 ```
