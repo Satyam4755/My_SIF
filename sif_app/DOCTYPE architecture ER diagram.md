@@ -24,16 +24,11 @@ erDiagram
         string sebi_code PK
 
         string fund_name
-        string fund_type
+        string investment_strategy
         string category
         string potential_risk_class
 
         string face_value
-        string listing_details
-
-        string registrar
-        string custodian
-        string auditor
 
         string minimum_application_amount
         string minimum_additional_amount
