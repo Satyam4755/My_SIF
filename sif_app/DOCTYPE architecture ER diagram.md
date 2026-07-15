@@ -19,12 +19,12 @@ erDiagram
     }
 
     FUND_MANAGER {
-          -  name-Random PK
+             name-Random PK
         Data manager_name
     }
 
     FUND_MANAGER_CHILD {
-          -  name-Random PK
+             name-Random PK
         Link fund_manager FK
         Data manager_type
         Date from_date
@@ -53,7 +53,7 @@ erDiagram
     }
 
     PLAN {
-          -  name-Random PK
+             name-Random PK
 
         Select mode
         Select option
