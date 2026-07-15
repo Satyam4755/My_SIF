@@ -14,26 +14,24 @@ erDiagram
 
 
     AMC {
-        Data name PK
-        Data amc_code
+        Data amc_code PK
         Data amc_name
     }
 
     FUND_MANAGER {
-        Data name PK
+          -  name-Random PK
         Data manager_name
     }
 
     FUND_MANAGER_CHILD {
-        Data name PK
+          -  name-Random PK
         Link fund_manager FK
         Data manager_type
         Date from_date
     }
 
     SIF_SCHEME {
-        Data name PK
-        Data sebi_code
+        Data sebi_code PK
         Data fund_name
         Small-Text investment_strategy
         Data category
@@ -46,50 +44,50 @@ erDiagram
 
         Text exit_load
 
-        Link amc FK
+        Link amc_code FK
 
         Datetime last_updated
+
+        Table Fund_Manager_child_table
+        Table Plan
     }
 
     PLAN {
-        Data name PK
+          -  name-Random PK
 
         Select mode
         Select option
 
         Data plan_name
-        Data sif_code
-        Data amfi_code
+        Data sif_code FK
         Data isin_code
-        Data rta_code
     }
 
     NAV {
-        Data name PK
 
-        Link plan FK
+        Date nav_date PK
 
-        Date nav_date
+        Link sif_code FK
         Float nav
     }
 
     PERFORMANCE {
-        Data name PK
+        Data sif_code PK
 
-        Link plan FK
+        Table plan FK
 
-        Float return_1_day
-        Float return_1_week
-        Float return_1_month
-        Float return_3_month
-        Float return_6_month
-        Float return_1_year
-        Float return_2_year
-        Float return_3_year
-        Float return_5_year
-        Float return_7_year
-        Float return_10_year
-        Float since_launch
+        Percent return_1_day
+        Percent return_1_week
+        Percent return_1_month
+        Percent return_3_month
+        Percent return_6_month
+        Percent return_1_year
+        Percent return_2_year
+        Percent return_3_year
+        Percent return_5_year
+        Percent return_7_year
+        Percent return_10_year
+        Percent since_launch
 
         Datetime last_updated
     }
