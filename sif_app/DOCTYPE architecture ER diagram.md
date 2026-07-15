@@ -74,7 +74,7 @@ erDiagram
     PERFORMANCE {
         Data sif_code PK
 
-        Table plan FK
+        Table plan 
 
         Percent return_1_day
         Percent return_1_week
