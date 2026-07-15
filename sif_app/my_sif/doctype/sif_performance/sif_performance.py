@@ -13,8 +13,9 @@ class SIF_PERFORMANCE(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
+		from sif_app.my_sif.doctype.sif_plan.sif_plan import SIF_Plan
 
-		plan: DF.Link | None
+		plan: DF.Table[SIF_Plan]
 		return_10_year: DF.Float
 		return_1_day: DF.Float
 		return_1_month: DF.Float
@@ -26,7 +27,7 @@ class SIF_PERFORMANCE(Document):
 		return_5_year: DF.Float
 		return_6_month: DF.Float
 		return_7_year: DF.Float
-		sif_code: DF.Data
+		sif_code: DF.Link
 		since_launch: DF.Float
 	# end: auto-generated types
 

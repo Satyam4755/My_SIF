@@ -35,14 +35,14 @@ erDiagram
         Data name PK
         Data sebi_code
         Data fund_name
-        Small_Text investment_strategy
+        Small-Text investment_strategy
         Data category
         Data potential_risk_class
         Data face_value
 
-        Small_Text minimum_application_amount
-        Small_Text minimum_additional_amount
-        Small_Text minimum_redemption_amount
+        Small-Text minimum_application_amount
+        Small-Text minimum_additional_amount
+        Small-Text minimum_redemption_amount
 
         Text exit_load
 

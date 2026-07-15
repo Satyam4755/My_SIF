@@ -13,10 +13,11 @@ class SIF_NAV(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
+		from sif_app.my_sif.doctype.sif_plan.sif_plan import SIF_Plan
 
 		nav: DF.Float
 		nav_date: DF.Date
-		plan: DF.Link | None
+		plan: DF.Table[SIF_Plan]
 		sif_code: DF.Data
 	# end: auto-generated types
 

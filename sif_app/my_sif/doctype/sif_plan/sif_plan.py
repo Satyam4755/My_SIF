@@ -18,12 +18,9 @@ class SIF_Plan(Document):
 		isin_code: DF.Data | None
 		mode: DF.Literal["Regular", "Direct"]
 		option: DF.Literal["Growth", "IDCW Payout", "IDCW Reinvestment", "IDCW Transfer"]
-		parent: DF.Data
-		parentfield: DF.Data
-		parenttype: DF.Data
 		plan_name: DF.Data
 		rta_code: DF.Data | None
-		sif_code: DF.Data | None
+		sif_code: DF.Link | None
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "SIF_Plan"
