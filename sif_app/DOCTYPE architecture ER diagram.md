@@ -9,7 +9,6 @@ erDiagram
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
     SIF_SCHEME ||--o{ PLAN : contains
-    PLAN ||--o{ NAV : has
     PLAN ||--|| PERFORMANCE : has
 
 
