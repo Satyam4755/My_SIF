@@ -55,20 +55,16 @@ erDiagram
     PLAN {
         Unique name-Random PK
 
-        Select mode
+        Select plan_mode
         Select option
+        Select subOption
+        Data time_period
 
-        Data plan_name
         Data sif_code FK
         Data isin_code
-    }
-
-    NAV {
-
-        Date nav_date PK
-
-        Link sif_code FK
+        Data rta_code
         Float nav
+        Date nav_date
     }
 
     PERFORMANCE {

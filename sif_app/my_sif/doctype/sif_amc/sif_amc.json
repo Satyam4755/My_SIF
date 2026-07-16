@@ -2,7 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "amc_code",
+ "autoname": "field:amc_code",
  "creation": "2026-07-14 12:53:51.866785",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "AMC Code",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "amc_name",
@@ -35,7 +36,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 12:57:31.963229",
+ "modified": "2026-07-15 16:36:29.508753",
  "modified_by": "Administrator",
  "module": "My SIF",
  "name": "SIF_AMC",

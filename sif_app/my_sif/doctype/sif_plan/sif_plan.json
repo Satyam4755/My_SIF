@@ -13,9 +13,7 @@
   "option",
   "plan_name",
   "sif_code",
-  "amfi_code",
-  "isin_code",
-  "rta_code"
+  "isin_code"
  ],
  "fields": [
   {
@@ -51,29 +49,19 @@
    "fieldtype": "Link",
    "label": "SIF Code",
    "mask": 1,
-   "options": "SIF_NAV"
-  },
-  {
-   "fieldname": "amfi_code",
-   "fieldtype": "Data",
-   "label": "AMFI Code"
+   "options": "SIF_PERFORMANCE"
   },
   {
    "fieldname": "isin_code",
    "fieldtype": "Data",
    "label": "ISIN Code"
-  },
-  {
-   "fieldname": "rta_code",
-   "fieldtype": "Data",
-   "label": "RTA Code"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-07-15 15:49:03.224188",
+ "modified": "2026-07-15 16:28:24.406053",
  "modified_by": "Administrator",
  "module": "My SIF",
  "name": "SIF_Plan",

@@ -15,6 +15,7 @@ class SIF_FundManager(Document):
 		from frappe.types import DF
 
 		manager_name: DF.Data
+		name: DF.Int | None
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "SIF_Fund Manager"

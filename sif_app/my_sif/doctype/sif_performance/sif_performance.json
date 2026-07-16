@@ -38,7 +38,7 @@
   },
   {
    "fieldname": "sif_code",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "SIF Code",
    "options": "SIF_NAV",
@@ -114,7 +114,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 17:44:33.005198",
+ "modified": "2026-07-15 16:26:10.087181",
  "modified_by": "Administrator",
  "module": "My SIF",
  "name": "SIF_PERFORMANCE",

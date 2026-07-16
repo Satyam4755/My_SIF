@@ -2,7 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "sebi_code",
+ "autoname": "field:sebi_code",
  "creation": "2026-07-14 13:02:27.947559",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -37,7 +37,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "SEBI Code",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "fund_name",
@@ -106,7 +107,7 @@
   {
    "fieldname": "amc",
    "fieldtype": "Link",
-   "label": "AMC",
+   "label": "AMC Code",
    "options": "SIF_AMC"
   },
   {
@@ -130,7 +131,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 13:13:20.742480",
+ "modified": "2026-07-15 16:36:58.699399",
  "modified_by": "Administrator",
  "module": "My SIF",
  "name": "SIF_SCHEME",

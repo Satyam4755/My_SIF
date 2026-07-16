@@ -8,7 +8,6 @@
  "engine": "InnoDB",
  "field_order": [
   "nav_details_section",
-  "plan",
   "sif_code",
   "nav_date",
   "nav"
@@ -20,16 +19,11 @@
    "label": "NAV Details"
   },
   {
-   "fieldname": "plan",
-   "fieldtype": "Table",
-   "label": "Plan",
-   "options": "SIF_Plan"
-  },
-  {
    "fieldname": "sif_code",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "SIF Code",
+   "options": "SIF_PERFORMANCE",
    "reqd": 1,
    "unique": 1
   },
@@ -51,7 +45,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 17:46:07.612571",
+ "modified": "2026-07-15 16:27:02.554869",
  "modified_by": "Administrator",
  "module": "My SIF",
  "name": "SIF_NAV",
