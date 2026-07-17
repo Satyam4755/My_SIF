@@ -5,6 +5,7 @@ for confirmation
 erDiagram
 
     AMC ||--o{ SIF_SCHEME : manages
+    SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ FUND_MANAGER_CHILD : has
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
@@ -34,7 +35,13 @@ erDiagram
     }
 
     SIF_SCHEME {
-        TAB Details
+        Tab1 Details
+        Tab2 Scheme_allocation
+        Tab3 Fund_manager
+        Tab4 Documents
+    }
+
+    Details{
         Data scheme_name
         Link AMC
         Data sebi_code 
