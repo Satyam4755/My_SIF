@@ -6,7 +6,10 @@ erDiagram
 
     AMC ||--o{ SIF_SCHEME : manages
     SIF_SCHEME ||--o{ Details : Tab1
-    SIF_SCHEME ||--o{ FUND_MANAGER_CHILD : has
+    SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
+    SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
+    SIF_SCHEME ||--o{ Details : Tab4
+    Scheme_Fund_manager ||--o{ FUND_MANAGER_CHILD : has
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
     SIF_SCHEME ||--o{ PLAN : contains
@@ -58,6 +61,15 @@ erDiagram
         Currency minimum_subscription
         Long_text scheme_objective
         Small_text exit_load
+    }
+
+    Scheme_Allocation{
+        Table allocations
+    }
+
+
+    Scheme_Fund_manager{
+        Table fund_manager
     }
 
     PLAN {
