@@ -35,7 +35,7 @@ erDiagram
 
     SIF_SCHEME {
          Details  scheme_allocation   fund_manager   Documents
-        Data sebi_code PK   
+        Data sebi_code PK Table scheme_all.
         Data fund_name
         Small-Text investment_strategy
         Data category
