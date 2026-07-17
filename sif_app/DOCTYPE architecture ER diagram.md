@@ -6,6 +6,7 @@ erDiagram
 
     AMC ||--o{ Details : manages
     
+    Details ||--o{ subcategory_name : linked_with
     PLAN ||--o{ SIF_SCHEME : linked_with
     PLAN ||--o{ PERFORMANCE : linked_with
     PERFORMANCE ||--o{ PLAN : linked_with
@@ -83,6 +84,10 @@ erDiagram
         Data monthly_portfolio_disclosure_url
     }
 
+    subcategory_name{
+        Data subcategory_name
+    }
+
     PLAN {
         Data isin PK
         Link scheme
@@ -100,8 +105,8 @@ erDiagram
 
     PERFORMANCE {
         Link scheme_plan
-
-        Table plan 
+        Data title
+        Date performance_date
 
         Percent return_1_day
         Percent return_1_week
@@ -114,7 +119,7 @@ erDiagram
         Percent return_5_year
         Percent return_7_year
         Percent return_10_year
-        Percent since_launch
+        Percent since_inception
 
         Datetime last_updated
     }
