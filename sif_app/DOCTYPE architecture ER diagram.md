@@ -3,8 +3,6 @@ for confirmation
 
 ```mermaid
 erDiagram
-
-    AMC ||--o{ Details : manages
     
     Details ||--o{ AMC : linked_with
     Details ||--o{ subcategory_name : linked_with
