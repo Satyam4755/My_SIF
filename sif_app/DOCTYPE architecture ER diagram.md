@@ -88,18 +88,19 @@ erDiagram
     }
 
     PLAN {
+        Fiend_type name e.g_value/keys
         Data isin PK
         Link scheme
-        Data full_name
-        Select type
-        Select option
-        Select sub_option
-        Select period
-        FLoat nav
-        Date nav_date
+        Data full_name plan_name
+        Select type Regular
+        Select option IDCW
+        Select sub_option Payout
+        Select period Weekly
+        FLoat nav 10
+        Date nav_date 17-07-2026
         link performance
-        Data sif_code
-        Data rta_code
+        Data sif_code SIF-12
+        Data rta_code B01
     }
 
     Scheme_Allocation_CHILD{
