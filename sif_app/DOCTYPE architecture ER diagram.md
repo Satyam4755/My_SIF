@@ -6,8 +6,9 @@ erDiagram
 
     AMC ||--o{ Details : manages
     
-    PLAN ||--o{ SIF_SCHEME : contains
-    PLAN ||--|| PERFORMANCE : has
+    PLAN ||--o{ SIF_SCHEME : linked_with
+    PLAN ||--|| PERFORMANCE : linked_with
+    PERFORMANCE ||--|| PLAN : linked_with
     SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
     SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
@@ -19,12 +20,12 @@ erDiagram
 
 
     AMC {
+        Data registration_number PK
         Data sif_name 
         Data amc_name 
         Select RTA 
         Check is_active 
         Data amc_code 
-        Data registration_number PK
 
     }
 
@@ -83,6 +84,7 @@ erDiagram
     }
 
     PLAN {
+        Data isin PK
         Link scheme
         Data full_name
         Select type
@@ -92,10 +94,12 @@ erDiagram
         FLoat nav
         Date nav_date
         link performance
+        Data sif_code
+        Data rta_code
     }
 
     PERFORMANCE {
-        Data sif_code PK
+        Link scheme_plan
 
         Table plan 
 
