@@ -34,26 +34,23 @@ erDiagram
     }
 
     SIF_SCHEME {
-        TAB Details 
-        Data sebi_code PK   
-        Data fund_name
-        Small-Text investment_strategy
-        Data category
-        Data potential_risk_class
-        Data face_value
-
-        Small-Text minimum_application_amount
-        Small-Text minimum_additional_amount
-        Small-Text minimum_redemption_amount
-
-        Text exit_load
-
-        Link amc_code FK
-
-        Datetime last_updated
-
-        Table Fund_Manager_child_table
-        Table Plan
+        TAB Details
+        Data scheme_name
+        Link AMC
+        Data sebi_code 
+        Check is_active
+        Check is_active_for_subs.
+        Date nfo_start_date
+        Date nfo_end_date
+        Date nfo_allotment_date
+        Date scheme_reopen_date
+        Select scheme_type
+        Select investment_strategy
+        Link scheme_subcategory
+        Int risk_band
+        Currency minimum_subscription
+        Long_text scheme_objective
+        Small_text exit_load
     }
 
     PLAN {
