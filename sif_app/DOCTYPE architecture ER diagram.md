@@ -84,7 +84,7 @@ erDiagram
     }
 
     subcategory_name{
-        Data subcategory_name
+        Data subcategory_name PK
     }
 
     PLAN {
