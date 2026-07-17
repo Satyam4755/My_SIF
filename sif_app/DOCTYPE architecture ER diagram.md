@@ -4,7 +4,7 @@ for confirmation
 ```mermaid
 erDiagram
 
-    AMC ||--o{ SIF_SCHEME : manages
+    AMC ||--o{ Details : manages
     SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
     SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
