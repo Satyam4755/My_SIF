@@ -13,7 +13,7 @@ erDiagram
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
     Scheme_Allocation ||--o{ Scheme_Allocation_CHILD : has
-    SIF_SCHEME ||--o{ PLAN : contains
+    PLAN ||--o{ SIF_SCHEME : contains
     PLAN ||--|| PERFORMANCE : has
 
 
