@@ -7,8 +7,8 @@ erDiagram
     AMC ||--o{ Details : manages
     
     PLAN ||--o{ SIF_SCHEME : linked_with
-    PLAN ||--|| PERFORMANCE : linked_with
-    PERFORMANCE ||--|| PLAN : linked_with
+    PLAN ||--o{ PERFORMANCE : linked_with
+    PERFORMANCE ||--o{ PLAN : linked_with
     SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
     SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
