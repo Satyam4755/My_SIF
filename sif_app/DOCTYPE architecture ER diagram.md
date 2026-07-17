@@ -5,6 +5,9 @@ for confirmation
 erDiagram
 
     AMC ||--o{ Details : manages
+    
+    PLAN ||--o{ SIF_SCHEME : contains
+    PLAN ||--|| PERFORMANCE : has
     SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
     SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
@@ -13,8 +16,6 @@ erDiagram
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
     Scheme_Allocation ||--o{ Scheme_Allocation_CHILD : has
-    PLAN ||--o{ SIF_SCHEME : contains
-    PLAN ||--|| PERFORMANCE : has
 
 
     AMC {
@@ -82,18 +83,15 @@ erDiagram
     }
 
     PLAN {
-        Unique name-Random PK
-
-        Select plan_mode
+        Link scheme
+        Data full_name
+        Select type
         Select option
-        Select subOption
-        Data time_period
-
-        Data sif_code FK
-        Data isin_code
-        Data rta_code
-        Float nav
+        Select sub_option
+        Select period
+        FLoat nav
         Date nav_date
+        link performance
     }
 
     PERFORMANCE {
