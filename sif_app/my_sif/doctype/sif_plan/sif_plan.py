@@ -14,10 +14,14 @@ class SIF_Plan(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		amfi_code: DF.Data | None
 		isin_code: DF.Data | None
 		mode: DF.Literal["Regular", "Direct"]
+		nav: DF.Float
+		nav_date: DF.Date | None
 		option: DF.Literal["Growth", "IDCW Payout", "IDCW Reinvestment", "IDCW Transfer"]
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
 		plan_name: DF.Data
 		rta_code: DF.Data | None
 		sif_code: DF.Link | None
