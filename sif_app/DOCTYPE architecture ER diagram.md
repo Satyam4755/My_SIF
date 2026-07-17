@@ -8,7 +8,7 @@ erDiagram
     SIF_SCHEME ||--o{ Details : Tab1
     SIF_SCHEME ||--o{ Scheme_Allocation : Tab2
     SIF_SCHEME ||--o{ Scheme_Fund_manager : Tab3
-    SIF_SCHEME ||--o{ Details : Tab4
+    SIF_SCHEME ||--o{ Documents : Tab4
     Scheme_Fund_manager ||--o{ FUND_MANAGER_CHILD : has
     FUND_MANAGER ||--o{ FUND_MANAGER_CHILD : assigned_to
 
@@ -70,6 +70,14 @@ erDiagram
 
     Scheme_Fund_manager{
         Table fund_manager
+    }
+
+    Documents{
+        Data isid_url
+        Data kim_url
+        Data sai_url
+        Data factsheet_url
+        Data monthly_portfolio_disclosure_url
     }
 
     PLAN {
