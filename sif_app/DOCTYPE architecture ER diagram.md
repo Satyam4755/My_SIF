@@ -91,11 +91,11 @@ erDiagram
         Data isin PK
         Link scheme
         Data full_name
-        Select type Regular
-        Select option IDCW
-        Select sub_option Payout
-        Select period Weekly
-        FLoat nav 10
+        Select type 
+        Select option 
+        Select sub_option 
+        Select period 
+        FLoat nav 
         Date nav_date 
         link performance
         Data sif_code 
