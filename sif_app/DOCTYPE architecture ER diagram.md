@@ -13,29 +13,35 @@ erDiagram
 
 
     AMC {
-        Data amc_code PK
-        Data amc_name
+        Data sif_name 
+        Data amc_name 
+        Select RTA 
+        Check is_active 
+        Data amc_code 
+        Data registration_number PK
+
     }
 
     FUND_MANAGER {
-        Unique name-Random PK
         Data manager_name
     }
 
     FUND_MANAGER_CHILD {
-        Unique name-Random PK
-        Link fund_manager FK
-        Data manager_type
-        Date from_date
+        Link manager_name FK
+        Date from_date 
+        Date to_date 
+        Check is_active 
     }
 
     SIF_SCHEME {
-        Data sebi_code PK
-        Data fund_name
-        Small-Text investment_strategy
-        Data category
-        Data potential_risk_class
-        Data face_value
+        Details: 
+            Data sebi_code PK
+            Data fund_name
+            Small-Text investment_strategy
+            Data category
+            Data potential_risk_class
+        scheme_allocation:
+            Data face_value
 
         Small-Text minimum_application_amount
         Small-Text minimum_additional_amount
