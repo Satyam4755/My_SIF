@@ -102,6 +102,12 @@ erDiagram
         Data rta_code
     }
 
+    Scheme_Allocation_CHILD{
+        Small_Text allocation_type
+        Percent minimum_allocation_percentage
+        Percent maximum_allocation_percentage
+    }
+
     PERFORMANCE {
         Link scheme_plan
         Data title
