@@ -34,7 +34,7 @@ erDiagram
     }
 
     SIF_SCHEME {
-        Details  
+        Details - -
         Data sebi_code PK   
         Data fund_name
         Small-Text investment_strategy
