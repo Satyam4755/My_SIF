@@ -88,7 +88,6 @@ erDiagram
     }
 
     PLAN {
-        Fiend_type name e.g_value/keys
         Data isin PK
         Link scheme
         Data full_name plan_name
@@ -97,10 +96,10 @@ erDiagram
         Select sub_option Payout
         Select period Weekly
         FLoat nav 10
-        Date nav_date 17-07-2026
+        Date nav_date 
         link performance
-        Data sif_code SIF-12
-        Data rta_code B01
+        Data sif_code 
+        Data rta_code 
     }
 
     Scheme_Allocation_CHILD{
