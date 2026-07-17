@@ -6,6 +6,7 @@ erDiagram
 
     AMC ||--o{ Details : manages
     
+    Details ||--o{ AMC : linked_with
     Details ||--o{ subcategory_name : linked_with
     PLAN ||--o{ SIF_SCHEME : linked_with
     PLAN ||--o{ PERFORMANCE : linked_with
