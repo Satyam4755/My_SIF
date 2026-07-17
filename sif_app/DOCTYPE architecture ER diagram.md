@@ -34,14 +34,13 @@ erDiagram
     }
 
     SIF_SCHEME {
-        string ===== DETAILS =====
-        Data sebi_code PK
+        Details  
+        Data sebi_code PK   
         Data fund_name
         Small-Text investment_strategy
         Data category
         Data potential_risk_class
         Data face_value
-        string ===== SCHEME ALLOCATION =====
 
         Small-Text minimum_application_amount
         Small-Text minimum_additional_amount
