@@ -34,14 +34,13 @@ erDiagram
     }
 
     SIF_SCHEME {
-        Details: 
-            Data sebi_code PK
-            Data fund_name
-            Small-Text investment_strategy
-            Data category
-            Data potential_risk_class
-        scheme_allocation:
-            Data face_value
+         Details  scheme_allocation   fund_manager   Documents
+        Data sebi_code PK   
+        Data fund_name
+        Small-Text investment_strategy
+        Data category
+        Data potential_risk_class
+        Data face_value
 
         Small-Text minimum_application_amount
         Small-Text minimum_additional_amount
