@@ -90,7 +90,7 @@ erDiagram
     PLAN {
         Data isin PK
         Link scheme
-        Data full_name plan_name
+        Data full_name
         Select type Regular
         Select option IDCW
         Select sub_option Payout
