@@ -109,7 +109,7 @@ erDiagram
     }
 
     PERFORMANCE {
-        Link scheme_plan
+        Link scheme_plan PK
         Data title
         Date performance_date
 
